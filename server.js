@@ -40,7 +40,7 @@ app.get("/api/data", async (req, res) => {
 });
 
 app.get("/api/test", (req,res) => {
-  res.send("This is server 1(aws)");
+  res.send("This is server 2(azure)");
 });
 
 // Endpoint to submit data to the first model
