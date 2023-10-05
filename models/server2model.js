@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const server2Schema = new mongoose.Schema({
     name: String,
-    RollNo: Number,
-    server:String
+    RollNo: Number
 });
 
 const Server2Model = mongoose.model("Server2", server2Schema);
