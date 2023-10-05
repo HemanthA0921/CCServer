@@ -47,28 +47,9 @@ app.get("/api/test", (req,res) => {
 app.post("/api/submit", async (req, res) => {
   try {
     const { name, RollNo , server } = req.body;
-    if(server==="server1"){
-      const newData = new Server1Model({ name, RollNo , server });
-      await newData.save();
-      res.status(201).json({ message: "Data submitted successfully" });
-    }
-    else if(server=="server2"){
-      const newData = new Server2Model({ name, RollNo , server });
-      await newData.save();
-      res.status(201).json({ message: "Data submitted successfully" });
-    }
-    else if(server=="server3"){
       const newData = new Server3Model({ name, RollNo , server });
       await newData.save();
       res.status(201).json({ message: "Data submitted successfully" });
-    }
-    else if(server=="server4"){
-      const newData = new Server4Model({ name, RollNo , server });
-      await newData.save();
-      res.status(201).json({ message: "Data submitted successfully" });
-    }
-    
-    
    
   } catch (error) {
     console.error("Error submitting data:", error);
